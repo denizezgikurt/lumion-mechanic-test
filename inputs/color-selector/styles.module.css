@@ -1,0 +1,9 @@
+.container {
+  margin-bottom: 1em;
+}
+
+.container label {
+  font-size: var(--mechanic-label-font-size);
+  margin-bottom: 0.5em;
+  margin-left: 0.25em;
+}

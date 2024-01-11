@@ -1,0 +1,39 @@
+.root {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  padding-bottom: 2px;
+}
+
+.color {
+  flex: 1;
+  border-radius: 16px;
+  margin: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: var(--mechanic-input-height-quart);
+  font-size: 0.75rem;
+}
+
+.selected {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    border: 1px solid black;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

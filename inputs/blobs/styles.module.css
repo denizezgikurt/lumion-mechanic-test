@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+.container label {
+  display: block;
+  font-size: var(--mechanic-label-font-size);
+  margin-bottom: 1em;
+  margin-left: 0.25em;
+}
+
+.newBlobContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.blobContainer {
+  margin-bottom: 1em;
+  outline: none;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.newBlob {
+  position: absolute;
+  top: 1em;
+  right: 0.5em;
+
+  border: none;
+  padding: 0.2em 0.5em;
+  border-radius: var(--mechanic-input-height-half);
+  font-family: var(--mechanic-input-font);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  stroke: black;
+  fill: black;
+  stroke-width: 0.5px;
+}
+
+.firstBlob {
+  margin-top: 8px;
+}

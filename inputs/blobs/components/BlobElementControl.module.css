@@ -1,0 +1,64 @@
+.blobElement {
+  padding: 0.5em;
+  cursor: pointer;
+  &.selected {
+    background-color: #efefef;
+    border-radius: var(--mechanic-input-height-quart);
+  }
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blobControlContainer {
+  display: flex;
+  align-items: center;
+}
+
+.blobControl {
+  border: none;
+  padding: 0.2em 0.5em;
+  border-radius: var(--mechanic-input-height-half);
+  font-family: var(--mechanic-input-font);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  stroke: black;
+  fill: black;
+  stroke-width: 0.5px;
+}
+
+.blobControl:disabled {
+  stroke: #cccccc;
+  fill: #cccccc;
+  cursor: not-allowed;
+}
+
+.blobSvg {
+  height: 60px;
+  border: 1px solid #aaa;
+}
+
+.selected .blobSvg {
+  border-color: #666;
+}
+
+.extras {
+}
+
+.groupTitle {
+  padding-top: var(--mechanic-input-height-half);
+}
+
+.strokeWidthInput {
+  margin-bottom: var(--mechanic-input-height-quart);
+}
+.move {
+}
+
+.strokeInput {
+}

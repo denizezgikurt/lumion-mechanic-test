@@ -11,11 +11,11 @@ const CaptionGenerator = () => {
         model: "gpt-3.5-turbo",
         messages: [
           {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Write a creative social media caption."}
+          {"role": "user", "content": "Write a creative social media caption about Lumion 3d render software."}
         ]
       };
 
-      const API_KEY = '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'; 
+      const API_KEY = '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'; 
 
       // console.log(process.env.REACT_APP_OPENAI_API_KEY);
 

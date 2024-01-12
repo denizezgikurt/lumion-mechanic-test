@@ -6,15 +6,39 @@ const CaptionGenerator = () => {
 
   const generateCaptions = async () => {
     setIsLoading(true);
-    // This is where we'll call the API to generate captions
-    // For now, we'll use some placeholder text
-    const generatedCaptions = [
-      "Innovation drives us forward.",
-      "Crafting the future, one design at a time.",
-      "Where creativity meets technology."
-    ];
-    setCaptions(generatedCaptions);
-    setIsLoading(false);
+    try {
+      const requestBody = {
+        model: "gpt-3.5-turbo",
+        messages: [
+          {"role": "system", "content": "You are a helpful assistant."},
+          {"role": "user", "content": "Write a creative social media caption."}
+        ]
+      };
+
+      const API_KEY = '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'; 
+
+      // console.log(process.env.REACT_APP_OPENAI_API_KEY);
+
+      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setCaptions([data.choices[0].message.content]);
+    } catch (error) {
+      console.error("Failed to generate captions:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -22,11 +46,13 @@ const CaptionGenerator = () => {
       <button onClick={generateCaptions} disabled={isLoading}>
         {isLoading ? 'Generating...' : 'Generate Captions'}
       </button>
-      <div>
-        {captions.map((caption, index) => (
-          <div key={index}>{caption}</div>
-        ))}
-      </div>
+      {captions.length > 0 && (
+        <div>
+          {captions.map((caption, index) => (
+            <div key={index}>{caption}</div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

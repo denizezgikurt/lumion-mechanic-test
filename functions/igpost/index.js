@@ -161,7 +161,7 @@ export const handler = ({ inputs, mechanic }) => {
             {schedule.toUpperCase()}
           </div>
 
-          <Logo size={logoSize} top={grid.bottom} left={grid.right} />
+          {/* <Logo size={logoSize} top={grid.bottom} left={grid.right} /> */}
         </div>
       )}
     </div>

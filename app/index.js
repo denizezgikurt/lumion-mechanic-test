@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import CaptionGenerator from "./CaptionGenerator"; 
 
-
 import "../assets/fonts.css";
 import * as css from "./index.module.css";
 

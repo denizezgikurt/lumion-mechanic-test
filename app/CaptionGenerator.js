@@ -15,7 +15,7 @@ const CaptionGenerator = () => {
         ]
       };
 
-      const API_KEY = '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'; 
+      const API_KEY = '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'; 
 
       // console.log(process.env.REACT_APP_OPENAI_API_KEY);
 

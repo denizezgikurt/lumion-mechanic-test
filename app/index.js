@@ -26,8 +26,9 @@ export const SideBar = props => {
   return (
     <aside className={css.root}>
       <Head />
-      <CaptionGenerator />
+      
       <h1>Lumion Toolkit </h1>
+      <CaptionGenerator />
       {props.children}
     </aside>
   );
